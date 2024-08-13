@@ -1,14 +1,14 @@
 import os
 import psycopg2
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host='dpg-cqr3t85svqrc73fpf2ng-a.oregon-postgres.render.com',
-                            database='dbmovies_khqt',
-                            user='dbmovies_khqt_user',
-                            password='62q1Taj1TCyepotUWgBZjdCoJzvJKVsJ')
+    conn = psycopg2.connect(host=os.getev('HOST'),
+                            database=os.getev('DATABASE'),
+                            user=os.getev('USER'),
+                            password=os.getev('PASSWORD'))
     return conn
 
 
