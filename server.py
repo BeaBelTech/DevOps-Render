@@ -5,10 +5,10 @@ from flask import Flask
 app = Flask(__name__)
 
 def get_db_connection():
-    conn = psycopg2.connect(host=os.getev('HOST'),
-                            database=os.getev('DATABASE'),
-                            user=os.getev('USER'),
-                            password=os.getev('PASSWORD'))
+    conn = psycopg2.connect(host=HOST,
+                            database=DATABASE,
+                            user=USER,
+                            password=PASSWORD)
     return conn
 
 
